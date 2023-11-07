@@ -1,0 +1,3 @@
+rootProject.name = 'pso-aspose'
+
+include ':pso-aspose-ant'
