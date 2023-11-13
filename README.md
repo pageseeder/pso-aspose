@@ -16,7 +16,7 @@ to the project template in PageSeeder.
 This is because the `javax.mail` library used by Aspose clashes with `jakarta.mail` used by PageSeeder.
 
 To do this run the `publishing.copyToLib` gradle task under the `pso-aspose-ant` module
-and upload the files under `build/output/lib` to a `lib` folder where your `build.xml`
+and upload the files under `pso-aspose-ant/build/output/lib` to a `lib` folder where your `build.xml`
 file is in PageSeeder.
 
 Your `build.xml` will need similar to the following commands to run the task:
