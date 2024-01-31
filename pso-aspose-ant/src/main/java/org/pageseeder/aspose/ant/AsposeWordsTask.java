@@ -52,6 +52,11 @@ public final class AsposeWordsTask extends Task {
   private List<Parameter> params = new ArrayList<>();
 
   /**
+   * The Aspose cloud base URL
+   */
+  private String baseUrl = null;
+
+  /**
    * The Aspose cloud client ID
    */
   private String clientId;
@@ -94,6 +99,13 @@ public final class AsposeWordsTask extends Task {
   }
 
   /**
+   * @param url the Aspose cloud base URL.
+   */
+  public void setBaseUrl(String url) {
+    this.baseUrl = url;
+  }
+
+  /**
    * @param id the Aspose cloud client ID.
    */
   public void setClientId(String id) {
@@ -130,7 +142,7 @@ public final class AsposeWordsTask extends Task {
 
     log("Converting DOCX " + this.source.getName() + " to PDF " + this.destination.getName());
 
-    ApiClient apiClient = new ApiClient(this.clientId, this.clientSecret, null);
+    ApiClient apiClient = new ApiClient(this.clientId, this.clientSecret, this.baseUrl);
     WordsApi wordsApi = new WordsApi(apiClient);
     try {
       byte[] requestDocument = Files.readAllBytes(this.source.toPath());

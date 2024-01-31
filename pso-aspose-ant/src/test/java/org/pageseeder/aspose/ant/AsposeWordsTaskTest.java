@@ -69,11 +69,13 @@ public class AsposeWordsTaskTest {
       props.load(input);
       String clientId = props.getProperty("clientid");
       String clientSecret = props.getProperty("clientsecret");
+      String url = props.getProperty("baseurl");
       if (clientId == null || clientSecret == null) {
         throw new IOException("The clientid and clientsecret must be defined in pso-aspose-ant/aspose.properties");
       }
       task.setClientId(clientId);
       task.setClientSecret(clientSecret);
+      task.setBaseUrl(url);
       if (updateFields) {
         task.setUpdateFields(true);
       }
