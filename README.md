@@ -42,3 +42,5 @@ Attribute `baseurl` is optional and can be used if hosting aspose locally
 (e.g. `aspose.baseurl=https://aspose.example.org` )
 
 For information on Aspose Words Cloud see https://products.aspose.cloud/words/java/
+
+For support see https://forum.aspose.cloud/c/words
